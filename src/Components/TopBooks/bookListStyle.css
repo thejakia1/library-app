@@ -1,0 +1,113 @@
+/* box-shadow */
+ol.listStyle > li,
+ol.listStyle > li::before {
+  box-shadow: 0.25rem 0.25rem 0.6rem #0000000d,
+    0 0.5rem 1.125rem #4b00000d;
+}
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.textStyle{
+    color: #013870;
+    font-weight: 600;
+}
+.listContainer {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1em;
+}
+
+ol.listStyle {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+ol.listStyle li {
+  background: #e6e5e5;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+ol.listStyle li::before, ol.listStyle li::after {
+  content: "";
+  background: linear-gradient(135deg, #013870 0%, #669cd3 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  height: 3rem;
+  margin-top: 5px;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+ol.listStyle li::before {
+  align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #ececec;
+  display: flex;
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+ol.listStyle li:nth-child(10n + 1):before {
+  background: linear-gradient(
+    135deg,
+    #a2ed5633 0%,
+    #fddc3233 100%
+  );
+}
+ol.listStyle li:nth-child(10n + 2):before {
+  background: linear-gradient(
+    135deg,
+    #a2ed5666 0%,
+    #fddc3266 100%
+  );
+}
+ol.listStyle li:nth-child(10n + 3):before {
+  background: linear-gradient(
+    135deg,
+    #a2ed5699 0%,
+    #fddc3299 100%
+  );
+}
+ol.listStyle li:nth-child(10n + 4):before {
+  background: linear-gradient(
+    135deg,
+    #a2ed56cc 0%,
+    #fddc32cc 100%
+  );
+}
+ol.listStyle li:nth-child(10n + 5):before {
+  background: linear-gradient(
+    135deg,
+    #a2ed56 0%,
+    #fddc32 100%
+  );
+}
+ol.listStyle li:nth-child(10n + 6):before {
+  background: linear-gradient(135deg, #a2ed56cc 0%, #fddc32cc 100%);
+}
+ol.listStyle li:nth-child(10n + 7):before {
+  background: linear-gradient(135deg, #a2ed5699 0%, #fddc3299 100%);
+}
+ol.listStyle li:nth-child(10n + 8):before {
+  background: linear-gradient(135deg, #a2ed5666 0%, #fddc3266 100%);
+}
+ol.listStyle li:nth-child(10n + 9):before {
+  background: linear-gradient(135deg, #a2ed5633 0%, #fddc3233 100%);
+}
+ol.listStyle li:nth-child(10n + 10):before {
+  background: linear-gradient(135deg, #a2ed5600 0%, #fddc3200 100%);
+}
+ol.listStyle li + li {
+  margin-top: 2rem;
+}
