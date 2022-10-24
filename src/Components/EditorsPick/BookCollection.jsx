@@ -10,6 +10,7 @@ function BookCollection() {
   return (
     <div className="mt-4 mb-3">
       <h3 className="headingStyle">Editor's Pick</h3>
+      <p className="text-center">Click on each book to see details</p>
       {books.length === 0 ? (
         <div className="d-flex justify-content-center">
           <Spinner animation="border" variant="danger" />
