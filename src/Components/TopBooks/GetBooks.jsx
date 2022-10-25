@@ -4,6 +4,7 @@ import useBooks from "../../hooks/useBooks";
 import NewRelease from "./NewRelease";
 import dialStyle from "./dialStyle.css";
 import bookListStyle from "./bookListStyle.css";
+import { Roll, Fade } from "react-reveal";
 
 function GetBooks() {
   const [books] = useBooks();
@@ -14,9 +15,8 @@ function GetBooks() {
       setLimit(limit - 1);
     } else if (value === "increase" && limit < 10) {
       setLimit(limit + 1);
-    }
-    else{
-      alert ("Only 1-10 entries available! You broke the limit")
+    } else {
+      alert("Only 1-10 entries available! You broke the limit");
     }
   };
 
@@ -29,25 +29,35 @@ function GetBooks() {
       ) : (
         <Row xs={1} lg={2} md={2} className="container mx-auto">
           <Col>
-            <h3 className="textStyle ms-3">Recent Released Books</h3>
-            <div className="listContainer">
-              <ol className="listStyle">
-                {books.map((book) => (
-                  <NewRelease key={book._id} book={[book]}></NewRelease>
-                ))}
-              </ol>
-            </div>
+            <Roll right>
+              <h3 className="textStyle ms-3">Recent Released Books</h3>
+            </Roll>
+            <Fade left>
+              <div className="listContainer">
+                <ol className="listStyle">
+                  {books.map((book) => (
+                    <NewRelease key={book._id} book={[book]}></NewRelease>
+                  ))}
+                </ol>
+              </div>
+            </Fade>
           </Col>
           <Col>
-            <h3 className="textStyle ms-3">Top Books</h3>
-            <div className="listContainer">
-              <ol className="listStyle">
-                {books.map((book, i) => {
-                  if (i >= limit) return;
-                  return <NewRelease key={book._id} book={[book]}></NewRelease>;
-                })}
-              </ol>
-            </div>
+            <Roll left>
+              <h3 className="textStyle ms-3">Top Books</h3>
+            </Roll>
+            <Fade right>
+              <div className="listContainer">
+                <ol className="listStyle">
+                  {books.map((book, i) => {
+                    if (i >= limit) return;
+                    return (
+                      <NewRelease key={book._id} book={[book]}></NewRelease>
+                    );
+                  })}
+                </ol>
+              </div>
+            </Fade>
             {/* <p>{test.length}</p> */}
             <div className="ms-3 fw-bold">
               Show{" "}
