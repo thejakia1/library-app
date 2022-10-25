@@ -4,7 +4,8 @@ import useBooks from "../../hooks/useBooks";
 import NewRelease from "./NewRelease";
 import dialStyle from "./dialStyle.css";
 import bookListStyle from "./bookListStyle.css";
-import { Roll, Fade } from "react-reveal";
+import { Fade } from "react-reveal";
+import Pulse from 'react-reveal/Pulse';
 
 function GetBooks() {
   const [books] = useBooks();
@@ -22,6 +23,7 @@ function GetBooks() {
 
   return (
     <div className="mt-4 mb-5">
+      <h1 className="textStyle text-center mb-5">Nilkhet Book World</h1>
       {books.length === 0 ? (
         <div className="d-flex justify-content-center">
           <Spinner animation="border" variant="danger" />
@@ -29,9 +31,9 @@ function GetBooks() {
       ) : (
         <Row xs={1} lg={2} md={2} className="container mx-auto">
           <Col>
-            <Roll right>
-              <h3 className="textStyle ms-3">Recent Released Books</h3>
-            </Roll>
+            <Pulse>
+              <h3 className="textStyle text-center">Recent Released Books</h3>
+            </Pulse>
             <Fade left>
               <div className="listContainer">
                 <ol className="listStyle">
@@ -43,9 +45,9 @@ function GetBooks() {
             </Fade>
           </Col>
           <Col>
-            <Roll left>
-              <h3 className="textStyle ms-3">Top Books</h3>
-            </Roll>
+            <Pulse>
+              <h3 className="textStyle text-center">Top Books</h3>
+            </Pulse>
             <Fade right>
               <div className="listContainer">
                 <ol className="listStyle">
