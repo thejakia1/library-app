@@ -1,7 +1,9 @@
 # Library App
 
-Live Link: https://jk-library-app.netlify.app/
-Code Link: https://github.com/thejakia1/library-app
+> Live Link: https://jk-library-app.netlify.app/
+> Code Link: https://github.com/thejakia1/library-app
+
+
 
 ## Features
 
@@ -11,10 +13,11 @@ Code Link: https://github.com/thejakia1/library-app
 - To fetch data, I tried using google or open library API. But there were some unwanted problems in getting the API so I used itbook API which is working. Will switch to another API soon.
 
 ## To run this Website from your device:
+Install the dependencies and devDependencies and start the server.
 
-- please download the ZIP file of the code or run "git clone https://github.com/thejakia1/library-app.git" at the terminal.
-- please download the ZIP file of the code or run "git clone https://github.com/thejakia1/library-app.git" at the terminal.
-- To run this project at localhost please run "npm start".
+- please download the ZIP file of the code or run ```git clone https://github.com/thejakia1/library-app.git``` at the terminal.
+- Locate the project file at the terminal and run ```npm install``` to install the used packages.
+- To run this project at localhost please run ```npm start```.
 
 
 ### _More updates coming soon. Stay tuned!_
