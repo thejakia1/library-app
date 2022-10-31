@@ -25,7 +25,7 @@ const Book = (props) => {
           <Modal.Header closeButton>
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body className="fw-500">Price: {price}</Modal.Body>
+          <Modal.Body className="fw-500"><b>Price:</b> {price}</Modal.Body>
           <Modal.Footer>
             <Button variant="danger" onClick={handleClose}>
               Close
