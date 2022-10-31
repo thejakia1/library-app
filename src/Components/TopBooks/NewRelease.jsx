@@ -7,7 +7,7 @@ function NewRelease(props) {
   return (
     <div>
       {/* show books in ordered list */}
-      <li>{title}</li>
+      <li><b>{title}</b></li>
     </div>
   )
 }
